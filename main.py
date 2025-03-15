@@ -30,7 +30,8 @@ class ImageDownloader:
 
     def _get_images_dir_path(self):
         while True:
-            path = input("Enter the directory to save images: ")
+            print("Enter the directory to save images: ", end="", flush=True)
+            path = input()
             if not self._check_directory_access(path):
                 print("Directory not available, enter another one.")
             else:
@@ -81,3 +82,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+    
